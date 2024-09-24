@@ -1,38 +1,283 @@
 databaseChangeLog:
 
-# - changeSet:
-#     id: script1
-#     author: nvoxland
-#     changes:
-#     - sqlFile:
-#         path: script1.sql
-#         relativeToChangelogFile: true
-#     - rollback:
-#         - sqlFile:
-#             path: script1-rollback.sql
-#             relativeToChangelogFile: true
+# Index
 
-# - changeSet:
-#     id: script2
-#     author: nvoxland
-#     changes:
-#     - sqlFile:
-#         path: script2.sql
-#         relativeToChangelogFile: true
-#     - rollback:
-#         - sqlFile:
-#             path: script2-rollback.sql
-#             relativeToChangelogFile: true
+- changeSet:
+    id: idx_fk_address_id
+    author: workshop-user
+    changes:
+    - sqlFile:
+        path: idx_fk_address_id.sql
+        relativeToChangelogFile: true
+    - rollback:
+        - sqlFile:
+            path: idx_fk_address_id-rollback.sql
+            relativeToChangelogFile: true
 
-# - changeSet:
-#     id: script2
-#     author: nvoxland
-#     changes:
-#     - sqlFile:
-#         path: script2.sql
-#         relativeToChangelogFile: true
-#     - rollback:
-#         - sqlFile:
-#             path: script2-rollback.sql
-#             relativeToChangelogFile: true
+- changeSet:
+    id: idx_fk_store_id
+    author: workshop-user
+    changes:
+    - sqlFile:
+        path: idx_fk_store_id.sql
+        relativeToChangelogFile: true
+    - rollback:
+        - sqlFile:
+            path: idx_fk_store_id-rollback.sql
+            relativeToChangelogFile: true
+
+- changeSet:
+    id: idx_last_name
+    author: workshop-user
+    changes:
+    - sqlFile:
+        path: idx_last_name.sql
+        relativeToChangelogFile: true
+    - rollback:
+        - sqlFile:
+            path: idx_last_name-rollback.sql
+            relativeToChangelogFile: true
+
+- changeSet:
+    id: idx_actor_last_name
+    author: workshop-user
+    changes:
+    - sqlFile:
+        path: idx_actor_last_name.sql
+        relativeToChangelogFile: true
+    - rollback:
+        - sqlFile:
+            path: idx_actor_last_name-rollback.sql
+            relativeToChangelogFile: true
+
+- changeSet:
+    id: idx_fk_film_id
+    author: workshop-user
+    changes:
+    - sqlFile:
+        path: idx_fk_film_id.sql
+        relativeToChangelogFile: true
+    - rollback:
+        - sqlFile:
+            path: idx_fk_film_id-rollback.sql
+            relativeToChangelogFile: true
+
+- changeSet:
+    id: idx_fk_city_id
+    author: workshop-user
+    changes:
+    - sqlFile:
+        path: idx_fk_city_id.sql
+        relativeToChangelogFile: true
+    - rollback:
+        - sqlFile:
+            path: idx_fk_city_id-rollback.sql
+            relativeToChangelogFile: true
+
+- changeSet:
+    id: idx_fk_country_id
+    author: workshop-user
+    changes:
+    - sqlFile:
+        path: idx_fk_country_id.sql
+        relativeToChangelogFile: true
+    - rollback:
+        - sqlFile:
+            path: idx_fk_country_id-rollback.sql
+            relativeToChangelogFile: true
+
+- changeSet:
+    id: idx_store_id_film_id
+    author: workshop-user
+    changes:
+    - sqlFile:
+        path: idx_store_id_film_id.sql
+        relativeToChangelogFile: true
+    - rollback:
+        - sqlFile:
+            path: idx_store_id_film_id-rollback.sql
+            relativeToChangelogFile: true
+
+- changeSet:
+    id: idx_fk_customer_id
+    author: workshop-user
+    changes:
+    - sqlFile:
+        path: idx_fk_customer_id.sql
+        relativeToChangelogFile: true
+    - rollback:
+        - sqlFile:
+            path: idx_fk_customer_id-rollback.sql
+            relativeToChangelogFile: true
+
+- changeSet:
+    id: idx_fk_rental_id
+    author: workshop-user
+    changes:
+    - sqlFile:
+        path: idx_fk_rental_id.sql
+        relativeToChangelogFile: true
+    - rollback:
+        - sqlFile:
+            path: idx_fk_rental_id-rollback.sql
+            relativeToChangelogFile: true
+
+- changeSet:
+    id: idx_fk_staff_id
+    author: workshop-user
+    changes:
+    - sqlFile:
+        path: idx_fk_staff_id.sql
+        relativeToChangelogFile: true
+    - rollback:
+        - sqlFile:
+            path: idx_fk_staff_id-rollback.sql
+            relativeToChangelogFile: true
+
+- changeSet:
+    id: idx_fk_inventory_id
+    author: workshop-user
+    changes:
+    - sqlFile:
+        path: idx_fk_inventory_id.sql
+        relativeToChangelogFile: true
+    - rollback:
+        - sqlFile:
+            path: idx_fk_inventory_id-rollback.sql
+            relativeToChangelogFile: true
+
+- changeSet:
+    id: idx_unq_rental_rental_date_inventory_id_customer_id
+    author: workshop-user
+    changes:
+    - sqlFile:
+        path: idx_unq_rental_rental_date_inventory_id_customer_id.sql
+        relativeToChangelogFile: true
+    - rollback:
+        - sqlFile:
+            path: idx_unq_rental_rental_date_inventory_id_customer_id-rollback.sql
+            relativeToChangelogFile: true
+
+- changeSet:
+    id: idx_unq_manager_staff_id
+    author: workshop-user
+    changes:
+    - sqlFile:
+        path: idx_unq_manager_staff_id.sql
+        relativeToChangelogFile: true
+    - rollback:
+        - sqlFile:
+            path: idx_unq_manager_staff_id-rollback.sql
+            relativeToChangelogFile: true
+
+- changeSet:
+    id: film_fulltext_idx
+    author: workshop-user
+    changes:
+    - sqlFile:
+        path: film_fulltext_idx.sql
+        relativeToChangelogFile: true
+    - rollback:
+        - sqlFile:
+            path: film_fulltext_idx-rollback.sql
+            relativeToChangelogFile: true
+
+- changeSet:
+    id: idx_fk_language_id
+    author: workshop-user
+    changes:
+    - sqlFile:
+        path: idx_fk_language_id.sql
+        relativeToChangelogFile: true
+    - rollback:
+        - sqlFile:
+            path: idx_fk_language_id-rollback.sql
+            relativeToChangelogFile: true
+
+- changeSet:
+    id: idx_title
+    author: workshop-user
+    changes:
+    - sqlFile:
+        path: idx_title.sql
+        relativeToChangelogFile: true
+    - rollback:
+        - sqlFile:
+            path: idx_title-rollback.sql
+            relativeToChangelogFile: true
+
+
+# Data
+
+- changeSet:
+    id: inventory_initial
+    author: workshop-user
+    changes:
+    - sqlFile:
+        path: inventory_initial.sql
+        relativeToChangelogFile: true
+    - rollback:
+        - sqlFile:
+            path: inventory_initial-rollback.sql
+            relativeToChangelogFile: true
+
+- changeSet:
+    id: language_initial
+    author: workshop-user
+    changes:
+    - sqlFile:
+        path: language_initial.sql
+        relativeToChangelogFile: true
+    - rollback:
+        - sqlFile:
+            path: language_initial-rollback.sql
+            relativeToChangelogFile: true
+
+- changeSet:
+    id: payment_initial
+    author: workshop-user
+    changes:
+    - sqlFile:
+        path: payment_initial.sql
+        relativeToChangelogFile: true
+    - rollback:
+        - sqlFile:
+            path: payment_initial-rollback.sql
+            relativeToChangelogFile: true
+
+- changeSet:
+    id: rental_initial
+    author: workshop-user
+    changes:
+    - sqlFile:
+        path: rental_initial.sql
+        relativeToChangelogFile: true
+    - rollback:
+        - sqlFile:
+            path: rental_initial-rollback.sql
+            relativeToChangelogFile: true
+
+- changeSet:
+    id: store_initial
+    author: workshop-user
+    changes:
+    - sqlFile:
+        path: store_initial.sql
+        relativeToChangelogFile: true
+    - rollback:
+        - sqlFile:
+            path: store_initial-rollback.sql
+            relativeToChangelogFile: true
+
+- changeSet:
+    id: staff_initial
+    author: workshop-user
+    changes:
+    - sqlFile:
+        path: staff_initial.sql
+        relativeToChangelogFile: true
+    - rollback:
+        - sqlFile:
+            path: staff_initial-rollback.sql
+            relativeToChangelogFile: true
 

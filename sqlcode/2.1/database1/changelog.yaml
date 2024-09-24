@@ -1,38 +1,116 @@
 databaseChangeLog:
 
-# - changeSet:
-#     id: script1
-#     author: nvoxland
-#     changes:
-#     - sqlFile:
-#         path: script1.sql
-#         relativeToChangelogFile: true
-#     - rollback:
-#         - sqlFile:
-#             path: script1-rollback.sql
-#             relativeToChangelogFile: true
+# Sequences
 
-# - changeSet:
-#     id: script2
-#     author: nvoxland
-#     changes:
-#     - sqlFile:
-#         path: script2.sql
-#         relativeToChangelogFile: true
-#     - rollback:
-#         - sqlFile:
-#             path: script2-rollback.sql
-#             relativeToChangelogFile: true
+- changeSet:
+    id: rental_rental_id_seq
+    author: workshop-user
+    changes:
+    - sqlFile:
+        path: rental_rental_id_seq.sql
+        relativeToChangelogFile: true
+    - rollback:
+        - sqlFile:
+            path: rental_rental_id_seq-rollback.sql
+            relativeToChangelogFile: true
 
-# - changeSet:
-#     id: script2
-#     author: nvoxland
-#     changes:
-#     - sqlFile:
-#         path: script2.sql
-#         relativeToChangelogFile: true
-#     - rollback:
-#         - sqlFile:
-#             path: script2-rollback.sql
-#             relativeToChangelogFile: true
+- changeSet:
+    id: store_store_id_seq
+    author: workshop-user
+    changes:
+    - sqlFile:
+        path: store_store_id_seq.sql
+        relativeToChangelogFile: true
+    - rollback:
+        - sqlFile:
+            path: store_store_id_seq-rollback.sql
+            relativeToChangelogFile: true
+
+- changeSet:
+    id: staff_staff_id_seq
+    author: workshop-user
+    changes:
+    - sqlFile:
+        path: staff_staff_id_seq.sql
+        relativeToChangelogFile: true
+    - rollback:
+        - sqlFile:
+            path: staff_staff_id_seq-rollback.sql
+            relativeToChangelogFile: true
+
+# Tables
+
+- changeSet:
+    id: rental
+    author: workshop-user
+    changes:
+    - sqlFile:
+        path: rental.sql
+        relativeToChangelogFile: true
+    - rollback:
+        - sqlFile:
+            path: rental-rollback.sql
+            relativeToChangelogFile: true
+
+- changeSet:
+    id: store
+    author: workshop-user
+    changes:
+    - sqlFile:
+        path: store.sql
+        relativeToChangelogFile: true
+    - rollback:
+        - sqlFile:
+            path: store-rollback.sql
+            relativeToChangelogFile: true
+
+- changeSet:
+    id: staff
+    author: workshop-user
+    changes:
+    - sqlFile:
+        path: staff.sql
+        relativeToChangelogFile: true
+    - rollback:
+        - sqlFile:
+            path: staff-rollback.sql
+            relativeToChangelogFile: true
+
+# View
+
+- changeSet:
+    id: actor_info
+    author: workshop-user
+    changes:
+    - sqlFile:
+        path: actor_info.sql
+        relativeToChangelogFile: true
+    - rollback:
+        - sqlFile:
+            path: actor_info-rollback.sql
+            relativeToChangelogFile: true
+
+- changeSet:
+    id: customer_list
+    author: workshop-user
+    changes:
+    - sqlFile:
+        path: customer_list.sql
+        relativeToChangelogFile: true
+    - rollback:
+        - sqlFile:
+            path: customer_list-rollback.sql
+            relativeToChangelogFile: true
+
+- changeSet:
+    id: film_list
+    author: workshop-user
+    changes:
+    - sqlFile:
+        path: film_list.sql
+        relativeToChangelogFile: true
+    - rollback:
+        - sqlFile:
+            path: film_list-rollback.sql
+            relativeToChangelogFile: true
 

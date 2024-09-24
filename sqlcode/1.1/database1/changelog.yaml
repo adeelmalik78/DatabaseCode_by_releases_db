@@ -1,38 +1,78 @@
 databaseChangeLog:
 
-# - changeSet:
-#     id: script1
-#     author: nvoxland
-#     changes:
-#     - sqlFile:
-#         path: script1.sql
-#         relativeToChangelogFile: true
-#     - rollback:
-#         - sqlFile:
-#             path: script1-rollback.sql
-#             relativeToChangelogFile: true
+# Sequences
 
-# - changeSet:
-#     id: script2
-#     author: nvoxland
-#     changes:
-#     - sqlFile:
-#         path: script2.sql
-#         relativeToChangelogFile: true
-#     - rollback:
-#         - sqlFile:
-#             path: script2-rollback.sql
-#             relativeToChangelogFile: true
+- changeSet:
+    id: country_country_id_seq
+    author: workshop-user
+    changes:
+    - sqlFile:
+        path: country_country_id_seq.sql
+        relativeToChangelogFile: true
+    - rollback:
+        - sqlFile:
+            path: country_country_id_seq-rollback.sql
+            relativeToChangelogFile: true
 
-# - changeSet:
-#     id: script2
-#     author: nvoxland
-#     changes:
-#     - sqlFile:
-#         path: script2.sql
-#         relativeToChangelogFile: true
-#     - rollback:
-#         - sqlFile:
-#             path: script2-rollback.sql
-#             relativeToChangelogFile: true
+- changeSet:
+    id: customer_customer_id_seq
+    author: workshop-user
+    changes:
+    - sqlFile:
+        path: customer_customer_id_seq.sql
+        relativeToChangelogFile: true
+    - rollback:
+        - sqlFile:
+            path: customer_customer_id_seq-rollback.sql
+            relativeToChangelogFile: true
+
+- changeSet:
+    id: film_film_id_seq
+    author: workshop-user
+    changes:
+    - sqlFile:
+        path: film_film_id_seq.sql
+        relativeToChangelogFile: true
+    - rollback:
+        - sqlFile:
+            path: film_film_id_seq-rollback.sql
+            relativeToChangelogFile: true
+
+# Tables
+
+- changeSet:
+    id: country
+    author: workshop-user
+    changes:
+    - sqlFile:
+        path: country.sql
+        relativeToChangelogFile: true
+    - rollback:
+        - sqlFile:
+            path: country-rollback.sql
+            relativeToChangelogFile: true
+
+- changeSet:
+    id: customer
+    author: workshop-user
+    changes:
+    - sqlFile:
+        path: customer.sql
+        relativeToChangelogFile: true
+    - rollback:
+        - sqlFile:
+            path: customer-rollback.sql
+            relativeToChangelogFile: true
+
+- changeSet:
+    id: film
+    author: workshop-user
+    changes:
+    - sqlFile:
+        path: film.sql
+        relativeToChangelogFile: true
+    - rollback:
+        - sqlFile:
+            path: film-rollback.sql
+            relativeToChangelogFile: true
 

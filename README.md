@@ -18,7 +18,7 @@ Here is the high-level overview of the directory structure. Note that there is a
     └── rootchangelog.yaml
 ```
 
-Here is the entire directory structure of this repo. There are schema subdirectories in each release directory. And each schema subdirectory has its own changelog file (e.g., `schema1changelog.yaml`). 
+Here is the entire directory structure of this repo. There are database subdirectories in each release directory. And each database subdirectory has its own changelog file (e.g., `database1changelog.yaml`). 
 ```
 .
 ├── README.md
@@ -26,51 +26,51 @@ Here is the entire directory structure of this repo. There are schema subdirecto
 └── sqlcode
     ├── 1.0
     │   ├── changelog.yaml
-    │   ├── schema1
+    │   ├── database1
     │   │   └── changelog.yaml
-    │   ├── schema2
+    │   ├── database2
     │   │   └── changelog.yaml
-    │   └── schema3
+    │   └── database3
     │       └── changelog.yaml
     ├── 1.1
     │   ├── changelog.yaml
-    │   ├── schema1
+    │   ├── database1
     │   │   └── changelog.yaml
-    │   ├── schema2
+    │   ├── database2
     │   │   └── changelog.yaml
-    │   └── schema3
+    │   └── database3
     │       └── changelog.yaml
     ├── 2.0
     │   ├── changelog.yaml
-    │   ├── schema1
+    │   ├── database1
     │   │   └── changelog.yaml
-    │   ├── schema2
+    │   ├── database2
     │   │   └── changelog.yaml
-    │   └── schema3
+    │   └── database3
     │       └── changelog.yaml
     ├── 2.1
     │   ├── changelog.yaml
-    │   ├── schema1
+    │   ├── database1
     │   │   └── changelog.yaml
-    │   ├── schema2
+    │   ├── database2
     │   │   └── changelog.yaml
-    │   └── schema3
+    │   └── database3
     │       └── changelog.yaml
     ├── 2.2
     │   ├── changelog.yaml
-    │   ├── schema1
+    │   ├── database1
     │   │   └── changelog.yaml
-    │   ├── schema2
+    │   ├── database2
     │   │   └── changelog.yaml
-    │   └── schema3
+    │   └── database3
     │       └── changelog.yaml
     ├── 3.0
     │   ├── changelog.yaml
-    │   ├── schema1
+    │   ├── database1
     │   │   └── changelog.yaml
-    │   ├── schema2
+    │   ├── database2
     │   │   └── changelog.yaml
-    │   └── schema3
+    │   └── database3
     │       └── changelog.yaml
     └── rootchangelog.yaml
 ```
@@ -108,24 +108,24 @@ databaseChangeLog:
 
 ```
 
-`changelog.yaml` file in each release directory points to a changelog.yaml file in each schema directory:
+`changelog.yaml` file in each release directory points to a changelog.yaml file in each database directory:
 ```yaml
 databaseChangeLog:
 
 - include:
-    file: schema1/changelog.yaml
+    file: database1/changelog.yaml
     relativeToChangelogFile: true
 
 - include:
-    file: schema2/changelog.yaml
+    file: database2/changelog.yaml
     relativeToChangelogFile: true
 
 - include:
-    file: schema3/changelog.yaml
+    file: database3/changelog.yaml
     relativeToChangelogFile: true
 ```
 
-`changelog.yaml` file in each release/schemaX directory is configured with changesets using [sqlFile](https://docs.liquibase.com/change-types/sql-file.html) change type. You would provide `script1`, `script2` or `script3` in each changeset:
+`changelog.yaml` file in each release/databaseX directory is configured with changesets using [sqlFile](https://docs.liquibase.com/change-types/sql-file.html) change type. You would provide `script1`, `script2` or `script3` in each changeset:
 ```yaml
 - changeSet:
     id: script1

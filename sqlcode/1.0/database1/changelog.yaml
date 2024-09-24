@@ -1,38 +1,105 @@
 databaseChangeLog:
 
-# - changeSet:
-#     id: script1
-#     author: nvoxland
-#     changes:
-#     - sqlFile:
-#         path: script1.sql
-#         relativeToChangelogFile: true
-#     - rollback:
-#         - sqlFile:
-#             path: script1-rollback.sql
-#             relativeToChangelogFile: true
+# Sequences
 
-# - changeSet:
-#     id: script2
-#     author: nvoxland
-#     changes:
-#     - sqlFile:
-#         path: script2.sql
-#         relativeToChangelogFile: true
-#     - rollback:
-#         - sqlFile:
-#             path: script2-rollback.sql
-#             relativeToChangelogFile: true
+- changeSet:
+    id: actor_actor_id_seq
+    author: workshop-user
+    changes:
+    - sqlFile:
+        path: actor_actor_id_seq.sql
+        relativeToChangelogFile: true
+    - rollback:
+        - sqlFile:
+            path: actor_actor_id_seq-rollback.sql
+            relativeToChangelogFile: true
 
-# - changeSet:
-#     id: script2
-#     author: nvoxland
-#     changes:
-#     - sqlFile:
-#         path: script2.sql
-#         relativeToChangelogFile: true
-#     - rollback:
-#         - sqlFile:
-#             path: script2-rollback.sql
-#             relativeToChangelogFile: true
+- changeSet:
+    id: address_address_id_seq
+    author: workshop-user
+    changes:
+    - sqlFile:
+        path: address_address_id_seq.sql
+        relativeToChangelogFile: true
+    - rollback:
+        - sqlFile:
+            path: address_address_id_seq-rollback.sql
+            relativeToChangelogFile: true
+
+- changeSet:
+    id: category_category_id_seq
+    author: workshop-user
+    changes:
+    - sqlFile:
+        path: category_category_id_seq.sql
+        relativeToChangelogFile: true
+    - rollback:
+        - sqlFile:
+            path: category_category_id_seq-rollback.sql
+            relativeToChangelogFile: true
+
+- changeSet:
+    id: city_city_id_seq
+    author: workshop-user
+    changes:
+    - sqlFile:
+        path: city_city_id_seq.sql
+        relativeToChangelogFile: true
+    - rollback:
+        - sqlFile:
+            path: city_city_id_seq-rollback.sql
+            relativeToChangelogFile: true
+
+
+
+# Tables
+
+- changeSet:
+    id: actor
+    author: workshop-user
+    changes:
+    - sqlFile:
+        path: actor.sql
+        relativeToChangelogFile: true
+    - rollback:
+        - sqlFile:
+            path: actor-rollback.sql
+            relativeToChangelogFile: true
+            
+- changeSet:
+    id: address
+    author: workshop-user
+    changes:
+    - sqlFile:
+        path: address.sql
+        relativeToChangelogFile: true
+    - rollback:
+        - sqlFile:
+            path: address-rollback.sql
+            relativeToChangelogFile: true
+
+- changeSet:
+    id: category
+    author: workshop-user
+    changes:
+    - sqlFile:
+        path: category.sql
+        relativeToChangelogFile: true
+    - rollback:
+        - sqlFile:
+            path: category-rollback.sql
+            relativeToChangelogFile: true
+
+- changeSet:
+    id: city
+    author: workshop-user
+    changes:
+    - sqlFile:
+        path: city.sql
+        relativeToChangelogFile: true
+    - rollback:
+        - sqlFile:
+            path: city-rollback.sql
+            relativeToChangelogFile: true
+
 
