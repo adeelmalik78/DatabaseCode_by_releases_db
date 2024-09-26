@@ -10,21 +10,21 @@ docker pull postgres
 
 echo
 echo "*** Starting postgres-dev ... "
-docker run -v ${PWD}:/opt \
+docker run \
     --name postgres-dev \
     -p 5432:5432 \
     -e POSTGRES_PASSWORD=secret \
     -d postgres
 
 echo "*** Starting postgres-qa ... "
-docker run -v ${PWD}:/opt \
+docker run \
     --name postgres-qa \
     -p 5433:5432 \
     -e POSTGRES_PASSWORD=secret \
     -d postgres
 
 echo "*** Starting postgres-prod ... "
-docker run -v ${PWD}:/opt \
+docker run \
     --name postgres-prod \
     -p 5434:5432 \
     -e POSTGRES_PASSWORD=secret \
